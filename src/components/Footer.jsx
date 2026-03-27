@@ -6,7 +6,7 @@ const Footer = () => {
   const [showCareerPopup, setShowCareerPopup] = useState(false);
 
   return (
-    <footer className="bg-gray-900 text-white  w-full">
+    <footer className="bg-gray-800 text-white  w-full">
       {/* Full width container with responsive padding */}
       <div className="w-full px-4 py-8 sm:px-6 md:px-12 lg:px-20 xl:px-32">
         {/* Top Section: Columns */}
@@ -14,11 +14,14 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="flex flex-col space-y-4 md:max-w-xs">
             <div className="flex items-center space-x-3 md:space-x-4">
+              <Link to="/">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqQJbXmuJi9Gnu6rMl9XX5wbPgnAUOU_fVpg&s"
                 alt="Logo"
                 className="h-12 w-12 md:h-14 md:w-14 rounded-full object-cover border-2 border-white shadow-md"
               />
+              </Link>
+              
               <span className="text-lg md:text-xl font-bold text-white">
                 Varun Beverage Nepal
               </span>
@@ -150,7 +153,12 @@ const Footer = () => {
               📞 +977-1-4990066 | +977-1-6630909
             </p>
             <p className="text-gray-300 text-sm md:text-base">
-              ✉️ info@varunbeverage.com
+              ✉️ <a
+      href="mailto:info@varunbeverage.com"
+      className="hover:text-yellow-400 transition-colors"
+    >
+      info@varunbeverage.com
+    </a>
             </p>
             <div className="flex space-x-3 md:space-x-4 mt-4">
               <a

@@ -39,7 +39,7 @@ const Navbar = () => {
               alt="Logo"
               className="h-12 w-12 rounded-full object-cover border-2 border-white shadow-md"
             />
-            <span className="text-xl font-bold">Varun Beverage Nepal</span>
+            <span className="text-xl font-bold" onClick="/">Varun Beverage Nepal</span>
           </Link>
 
           {/* Desktop Links */}
