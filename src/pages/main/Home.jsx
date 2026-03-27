@@ -17,7 +17,7 @@ const Home = () => {
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev === banner.length - 1 ? 0 : prev + 1));
-    }, 1000); // slide every 3 sec
+    }, 3000); // slide every 3 sec
 
     return () => clearInterval(interval);
   }, [isHovering]);

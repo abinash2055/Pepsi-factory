@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Importing from Main Page
 import Home from "./pages/main/Home";
@@ -27,6 +28,7 @@ function App() {
 
       {/* Main content */}
       <main className="flex-1 pt-20">
+         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
