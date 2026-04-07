@@ -47,7 +47,7 @@ export const products = [
 
   // Aquafine
   {
-    name: "AQUAFINA",
+    name: "Aquafina",
     description: "Enjoy the crisp and refreshing taste of AQUAFINA.",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO1dy2Y7ZNpSC0-dc0xXSR8ijvp2rHEk19cA&s",

@@ -9,7 +9,7 @@ export const offices = [
   {
     title: "Nawalparasi Varun Bevarage",
     address: "Nawalpur, Nawalparasi, Nepal",
-    phone: "+977-1-5707271 ",
+    phone: "No Number",
     email: "pcnpl@mail.com.np",
     map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2977.3696150510455!2d83.63525294134288!3d27.53020741775448!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994271eaaaaaaab%3A0xe63305b12e91e66a!2sVarun%20Beverages%20Nepal%20Pvt%20Ltd!5e1!3m2!1sen!2snp!4v1774505417483!5m2!1sen!2snp",
   },

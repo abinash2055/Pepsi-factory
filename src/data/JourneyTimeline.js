@@ -15,6 +15,11 @@ export const timelineItems = [
       "Incorporated SAP (System Application Product) ERP system to integrate departments.",
   },
   {
+    year: "2018",
+    event:
+      "Nawalparasi branch commerically started for easiness in western and southern part of Nepal.",
+  },
+  {
     year: "2019",
     event: "Paid roughly NPR 1.6 billion in bail regarding a tax dispute case.",
   },

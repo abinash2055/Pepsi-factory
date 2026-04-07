@@ -7,34 +7,41 @@ const ProductCard = ({ product, reverse }) => {
       ? "text-green-500"
       : product.name === "Mirinda" || product.name === "Slice"
         ? "text-orange-500"
-        : "text-red-500";
+        : product.name === "Aquafina"
+          ? "text-gray-500"
+          : "text-red-500";
 
   const descColor =
     product.name === "7-UP" || product.name === "Mountain Dew"
       ? "text-green-700"
       : product.name === "Mirinda" || product.name === "Slice"
         ? "text-orange-700"
-        : "text-gray-700";
+        : product.name === "Aquafina"
+          ? "text-gray-700"
+          : "text-gray-700";
 
   const headerBg =
     product.name === "7-UP" || product.name === "Mountain Dew"
       ? "bg-green-500"
       : product.name === "Mirinda" || product.name === "Slice"
         ? "bg-orange-500"
-        : "bg-red-500";
+        : product.name === "Aquafina"
+          ? "bg-gray-500"
+          : "bg-red-500";
 
   const innerBg =
     product.name === "7-UP" || product.name === "Mountain Dew"
       ? "bg-green-50"
       : product.name === "Mirinda" || product.name === "Slice"
         ? "bg-orange-50"
-        : "bg-red-50";
+        : product.name === "Aquafina"
+          ? "bg-gray-50"
+          : "bg-red-50";
 
   return (
     <div
-      className={`flex flex-col md:flex-row items-center justify-center md:justify-between bg-white shadow-md rounded-2xl p-8 my-8 ${
-        reverse ? "md:flex-row-reverse" : ""
-      }`}
+      className={`flex flex-col md:flex-row items-center justify-center md:justify-between bg-white shadow-md rounded-2xl p-8 my-8 ${reverse ? "md:flex-row-reverse" : ""
+        }`}
     >
       <div className="md:w-1/2 flex justify-center">
         <img
