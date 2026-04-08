@@ -4,10 +4,10 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App.jsx';
 
-// ✅ Import favicon from assets
+// Import favicon from assets
 import logo from './assets/logo.png';
 
-// ✅ Dynamically set favicon
+// Dynamically set favicon
 const link = document.querySelector("link[rel~='icon']");
 if (link) {
   link.href = logo;
