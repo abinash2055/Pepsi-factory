@@ -9,7 +9,6 @@ const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const [counts, setCounts] = useState(statsData.map(() => 0));
-  const [showPopup, setShowPopup] = useState(true);
   const sliderRef = useRef(null);
 
   // 🔥 Banner auto-slide (step)
@@ -75,65 +74,9 @@ const Home = () => {
     return () => intervals.forEach(clearInterval);
   }, []);
 
-  // 🔹 Popup auto-hide after 3 seconds
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowPopup(false);
-    }, 30000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <>
-      {/* 🔹 PopUp at Center */}
-      {showPopup && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/50 px-4">
-          <div
-            className="bg-white rounded-lg shadow-lg p-6 md:p-8 flex flex-col"
-            style={{
-              width: "95vw",       // almost full screen width
-              maxWidth: "1400px",  // limit width for very large screens
-              height: "95vh",      // almost full screen height
-            }}
-          >
-            {/* Content container */}
-            <div className="overflow-hidden">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-center">
-                Welcome to Our Varun Beverages Nepal!
-              </h2>
-              <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-8">
-                Kathmandu — Most of the popular brands of cold drinks available in the Nepali market are Pepsi, Mountain Dew, Mirinda, 7 Up, Sting (Energy Drinks) etc. The mentioned beverages are also known as carbonated soft drinks. On the other hand, 'Slice' in juice and 'Aquafina' in mineral water are also popular brands in Nepal.
-                <br />
-                All these products are under the Pepsi brand. The company producing and distributing them is Varun Beverages located in the old Sinamangal of Kathmandu, i.e. Pepsicola. Varun Beverages is a multinational company that has built its empire on 50 acres of land since 2055. Similarly, Varun Beverages is also doing its production and distribution work on 15 bigha land in Ramgram of Nawalparasi district.
-                <br />
-                Varun Beverages is the official bottler of Soft Drinks Pepsi in Nepal which is expanding its market without compromising on quality products. Keeping in view the market demand and the taste of the customer's choice, this company has been promoting its new products and has succeeded in occupying the Nepali market share of carbonated drinks above 40 percent and has also received the A+ rating from a prestigious organization like ICRA Nepal.
-                <br />
-                According to the demand of the market, Varun Beverages is emphasizing on market expansion by delivering its products to all parts of the country. Today, the company has an annual turnover of around 12 billion Nepali rupees. Varun Beverages is not only a multinational company but also a 'high tax payer' company of Nepal. Which has paid taxes of 4 to 5 billion rupees to the government of Nepal. It is also giving invaluable contribution to the country by employing thousands directly and tens of thousands indirectly.
-                <br />
-                Varun Beverages, which occupies a large market share especially in the neighboring country India, is also leading in Nepal, Sri Lanka, Zimbabwe, Morocco, South Africa, Congo and Kenya. Listed on the Indian stock exchanges NSE and VSE, Varun Beverages has more than 38 manufacturing plants in India alone.
-                <br />
-                Compared to other soft drinks products, this multinational company has been emphasizing on quality products & has been doing business of more than 16 trillion rupees annually in 8 different countries.
-                <br />
-                This company, being aware of the health of the customers, uses only sugar approved by Pepsi, and also installs international quality measuring machines and sends quality products to the market with high-quality 'bottling'. Thus establishing the company's products as world class brands.
-                <br />
-                On the other hand, while there is a debate that the consumption of sugar should be reduced in the world, the company is reducing the amount of sugar in its products as well as moving towards the concept of 'low sugar to zero sugar'. And the company has been doing remarkable work in various fields under social responsibility, not only looking at its commercial interests.
-              </p>
-            </div>
-
-            {/* Close Button */}
-            <div className="mt-4 flex justify-center">
-              <button
-                className="px-6 py-2 bg-purple-500 text-white rounded hover:bg-purple-600 text-sm sm:text-base md:text-lg"
-                onClick={() => setShowPopup(false)}
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* 🔹 Banner */}
       <div
         className="w-full h-screen overflow-hidden relative"
@@ -337,6 +280,13 @@ const Home = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Highlight */}
+      <div className="mt-10 bg-blue-50 border-l-4 border-blue-500 p-5 rounded-lg shadow-sm max-w-6xl justify-center items-center mx-auto mb-4">
+        <p className="text-gray-800 text-sm md:text-base">
+          🥤 <strong>Note:</strong> Pepsi bottler in Kathmandu & Nawalparasi, popular drinks, 40% market share, CSR contributor.
+        </p>
       </div>
     </>
   );
